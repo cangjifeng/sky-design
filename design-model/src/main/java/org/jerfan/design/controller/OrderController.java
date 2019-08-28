@@ -42,7 +42,7 @@ public class OrderController {
      * 使用者：OrderController ，想要使用 dubboOrderService 接口中的的行为
      * 但是OrderController 又不能直接调用dubboOrderService，调用CloudOrderService
      *
-     * @return
+     * @return OrderBean
      */
     @ResponseBody
     @RequestMapping(value = "/adapter-class/order/create",method = RequestMethod.GET)
@@ -69,7 +69,7 @@ public class OrderController {
     /**
      * 模拟云原生 订单创建 调用的是 cloud order
      * 但是上层没有进行告知，入参异常是OrderBean 回参依然是OrderBean
-     * @return
+     * @return TradeOrderBean
      */
     @ResponseBody
     @RequestMapping(value = "/cloud/order/create",method = RequestMethod.GET)
@@ -85,7 +85,7 @@ public class OrderController {
     /**
      * 模拟老中台创建订单接口 调用的是 dubbo order
      * 入参为 OrderBean 返回值为 OrderBean
-     * @return
+     * @return OrderBean
      */
     @ResponseBody
     @RequestMapping(value = "/dubbo/order/create",method = RequestMethod.GET)
