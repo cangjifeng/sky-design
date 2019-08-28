@@ -12,6 +12,7 @@ public class OrderBean {
 
     private String orderStatus;
 
+    public OrderBean(){}
 
     public String getOrderNo() {
         return orderNo;

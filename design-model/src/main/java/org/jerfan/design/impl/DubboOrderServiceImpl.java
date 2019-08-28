@@ -16,7 +16,8 @@ public class DubboOrderServiceImpl implements DubboOrderService {
     private static final Logger LOGGER = LoggerFactory.getLogger(DubboOrderServiceImpl.class);
     @Override
     public OrderBean orderCreate(OrderBean orderBean) {
-        LOGGER.info("dubbo order server ");
+        LOGGER.info("dubbo order server handle business ");
+        // business handle
         orderBean.setOrderStatus("10");
         return orderBean;
     }

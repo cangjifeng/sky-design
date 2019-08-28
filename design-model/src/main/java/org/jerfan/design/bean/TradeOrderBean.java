@@ -17,6 +17,7 @@ public class TradeOrderBean {
 
     private String orderStatus;
 
+    public TradeOrderBean(){}
 
     public String getOrderFrom() {
         return orderFrom;
